@@ -1,4 +1,4 @@
-dotfiles-work
-=============
+dotfiles
+========
 
-Dotfiles for my work laptop
+Dotfiles for my private laptop
