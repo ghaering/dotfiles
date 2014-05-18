@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/ghaering/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/ghaering/bin:/home/ghaering/npm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -72,3 +72,5 @@ export PATH=$PATH:~/bin
 export EDITOR=vim
 export PYTHONSTARTUP=$HOME/.env.py
 eval `keychain --eval --agents ssh id_rsa`
+
+chpwd_functions+=(__vte_osc7)
