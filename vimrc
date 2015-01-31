@@ -7,6 +7,7 @@ call vundle#rc()
 Bundle 'gamarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'wting/rust.vim'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'tpope/vim-rails.git'
 " vim-scripts repos

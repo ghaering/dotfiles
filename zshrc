@@ -67,10 +67,16 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/b
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export PATH=$PATH:~/bin
-
 export EDITOR=vim
 export PYTHONSTARTUP=$HOME/.env.py
 eval `keychain --eval --agents ssh id_rsa`
+
+# workaround for warning about GREP_OPTIONS being depracated.
+alias grep="/usr/bin/grep $GREP_OPTIONS"
+unset GREP_OPTIONS
+
+export GOPATH=~/src/go
+
+export PATH=$PATH:~/bin:$GOPATH/bin:~/git-up/bin:~/npm/bin
 
 chpwd_functions+=(__vte_osc7)
