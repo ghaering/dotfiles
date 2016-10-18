@@ -45,13 +45,13 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git autopep8 autojump archlinux git-flow python)
+plugins=(git autopep8 autojump archlinux python command-not-found cp docker docker-compose git-extras go golang man systemd tmux virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/ghaering/bin:/home/ghaering/npm/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/gerhard/bin:/home/gerhard/npm/bin:/opt/docker-compose/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -69,13 +69,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/b
 
 export EDITOR=vim
 export PYTHONSTARTUP=$HOME/.env.py
-eval `keychain --eval --agents ssh id_rsa`
+eval `keychain --nolock --eval --agents ssh id_rsa`
 
-# workaround for warning about GREP_OPTIONS being depracated.
-alias grep="/usr/bin/grep $GREP_OPTIONS"
-unset GREP_OPTIONS
-
-export GOPATH=~/src/go
+export GOPATH=~/
 
 export PATH=$PATH:~/bin:$GOPATH/bin:~/git-up/bin:~/npm/bin
 
